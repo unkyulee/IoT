@@ -54,15 +54,15 @@ void home_screen_render(Adafruit_SSD1306 *pDisplay)
         // Current and Power
         pDisplay->setTextSize(1);
         pDisplay->setCursor(16, 16);
-        pDisplay->print("AMPERE");
+        pDisplay->print("WATT");
 
         pDisplay->setTextSize(3);
         pDisplay->setCursor(0, 28);
-        pDisplay->printf("%0.1lf\n", app["Irms"].as<double>());
+        pDisplay->printf("%.0lf", app["Irms"].as<double>() * 230);
 
         pDisplay->setTextSize(1);
         pDisplay->setCursor(0, 54);
-        pDisplay->printf("%0.2lf W\n", app["Irms"].as<double>() * 230);
+        pDisplay->printf("%.2lf A", app["Irms"].as<double>());
 
         // Temperature
         pDisplay->setTextSize(1);
