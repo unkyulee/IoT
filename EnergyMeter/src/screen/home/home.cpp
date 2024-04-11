@@ -53,7 +53,7 @@ void home_screen_render(Adafruit_SSD1306 *pDisplay)
 
         // Current and Power
         pDisplay->setTextSize(1);
-        pDisplay->setCursor(16, 16);
+        pDisplay->setCursor(0, 16);
         pDisplay->print("WATT");
 
         pDisplay->setTextSize(3);
